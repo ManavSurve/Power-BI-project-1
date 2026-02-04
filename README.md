@@ -230,4 +230,28 @@ Financial Risk Metrics
 
 
 # Insights
+- Insights of Loan Amount by Purpose
+1) Loan Amount by Home Purpose = 6545M
+2)  Loan Amount by Business Purpose =  6522M
+3)  Loan Amount by Education Purpose = 6511M
+4)  Loan Amount by Auto Purpose = 6501M
+5)  Loan Amount by Others = 6498M
+
+- Insights of Average Income by Employment Type
+1) Average Income by Full-time Employment = 82890
+2) Average Income by Self-Emoloyment = 82447
+3) Average Income by Part-time Employment = 82389
+4) Average Income by Unemployed = 82272 
+
+
+
+
+
+
+
+
+
+
+
+
 
