@@ -34,31 +34,31 @@ Analyze Default Patterns: Correlate employment types and education levels with d
 
 - Step 6 : Create new measure as Loan Amount by Purpose (DAX Used : SUMX, FILTER, NOT, ISBLANK)
 
-DAX Function:
+Following DAX expression was written:
 
 
         Loan Amount by Purpose = SUMX(FILTER('Loan_default',NOT(ISBLANK('Loan_default'[LoanAmount]))),'Loan_default'[LoanAmount])
 
 A Line chart was used to represent Loan Amount by purpose:
 
-(https://github.com/user-attachments/assets/eb7093c4-e1fe-43a7-9742-240d1ae57914)
+![Image](https://github.com/user-attachments/assets/c6604009-7fa9-4eb8-8c52-f0516a1ce3e5)
 
 
 - Step 7 : Create new measure as Average Income by Employment Type (DAX Used : CALCULATE, AVERAGE & ALLEXCEPT)
 
-DAX Function:
+Following DAX expression was written:
 
 
         Average Income by Employment type = CALCULATE(AVERAGE('Loan_default'[Income]),ALLEXCEPT('Loan_default',Loan_default[EmploymentType]))
 
 A Line chart was used to represent Average Income by Employment Type :
 
-https://github.com/user-attachments/assets/aecf04ea-b547-4764-a04d-d79ec64757d8
+![Image](https://github.com/user-attachments/assets/7bcfb90a-ad06-488a-961f-317acb7e61d7)
 
 
 - Step 8 :Create new measure as Default Rate by Employment type(DAX : ALL,ALLEXCEPT,COUNTROWS,DIVIDE,FILTER etc)
 
-DAX Function:
+Following DAX expression was written:
 
 
         Default Rate by Employment Type = 
@@ -70,12 +70,11 @@ DAX Function:
 
 A Line chart was used to represent Default Rate by Employment type:
 
-"https://github.com/user-attachments/assets/022dc199-35db-4999-a119-0917483ee9c4"
-
+![Image](https://github.com/user-attachments/assets/dbc8e791-9978-4147-b26f-509371681111)
 
 - Step 9 :Create new measure as Average Loan Amount by Age Groups (DAX Used : AVERAGE, AVERAGEX & VALUES)
 
-DAX Function:
+Following DAX expression was written:
 
 
         Average Loan Amount by Age Group = 
@@ -84,12 +83,11 @@ DAX Function:
 
 A Line chart was used to represent  Average Loan Amount by Age Groups:
 
-"https://github.com/user-attachments/assets/6622ced4-8b9b-4dad-9403-8c29475efee4" 
-
+![Image](https://github.com/user-attachments/assets/c694e982-8b52-4dad-873d-65d6c0f828e6)
 
 - Step 10 : Create new measure as  Default Rate by Year (DAX Used :CALCULATE, COUNTROWS, ALLEXCEPT, FILTER, DIVIDE)
 
-DAX Function:
+Following DAX expression was written:
 
         Default Rate by Year = 
         VAR totalloans=
@@ -104,78 +102,78 @@ DAX Function:
 A Line chart was used to represent Default Rate by Year:
 
 
-"https://github.com/user-attachments/assets/2b2a2c34-4409-4771-83ee-51102fe36f61"
-
+![Image](https://github.com/user-attachments/assets/eabbd554-3336-4473-8c8b-8ec03b464de5)
 
 - Step 11 :  Median calculation & validation using MEDIANX DAX Function
 
 - Step 12 :Create a  new measureas as Median Loan Amount by credit score category
 
-DAX Function:
+Following DAX expression was written:
 
         Median by Credit score bins = 
         MEDIANX('Loan_default','Loan_default'[LoanAmount])
 
  A Line chart was used to represent Median Loan Amount by credit score category:
 
- "https://github.com/user-attachments/assets/763c0b0f-6e98-46df-97ec-8617e0cab07b
+![Image](https://github.com/user-attachments/assets/0ac0f44e-85e3-452c-9b6f-848c6e3df7df)
 
 
 - Step 13 : Adding Donut Chart to show Average Loan Amount by Age Group & Marital Status
 
-DAX Function :
+Following DAX expression was written :
 
         Average Loan Amt (High Credit) = 
         AVERAGEX(FILTER('Loan_default','Loan_default'[Credit Score Bins]="High"),'Loan_default'[LoanAmount])
 
-https://github.com/user-attachments/assets/17948b7d-147d-42a6-954d-808bc45ee7e1
+![Image](https://github.com/user-attachments/assets/c57e6faa-9e32-4b8f-a2ab-d6f1c3bce147)
 
 - Step 14 : Create a new measure as Loan(Adults) by credit categories (DAX Used : CALCULATE,AVERAGEX,SUM)
         
- DAX Function:
+Following DAX expression was written:
 
         Total Loan (Credit Bins) = 
         CALCULATE(SUM('Loan_default'[LoanAmount]),'Loan_default'[Age group]="Adults",ALLEXCEPT('Loan_default','Loan_default'[Age],Loan_default[Age group],'Loan_default'[CreditScore],'Loan_default'[Credit Score Bins]))
 
 A Line chart was used to represent Loan(Adults) by credit categories:
 
-https://github.com/user-attachments/assets/01788a41-6158-4ddf-9e6f-1bb68ec71a8a
+![Image](https://github.com/user-attachments/assets/7002c31b-de99-4cbc-97a8-51565f2e02ff)
 
 - Step 15 : New measure was created to find Total Loan (Middle Age Adults) by have Mortgage/Dependents
 
-DAX Function:
+Following DAX expression was written:
 
         Total Loan (Middle age adult) = 
         SUMX(FILTER('Loan_default','Loan_default'[Age group]="Middle Age Adult"),'Loan_default'[LoanAmount])
 
 A clusterad column chart was used to representTotal Loan (Middle Age Adults) by have Mortgage/Dependents
 
-https://github.com/user-attachments/assets/76961b48-1eaf-47c2-a009-3313801e80eb
+![Image](https://github.com/user-attachments/assets/1cbef3e2-f037-4d85-843c-360e347ec0a4)
         
  - Step 16 :New measure was created to find Loans by education type
 
- DAX Function:
+Following DAX expression was written:
 
          Loan by Education Type = 
         COUNTROWS(FILTER('Loan_default',NOT(ISBLANK('Loan_default'[LoanID]))))
 
 A Line chart was used to represent Loans by education type:
 
-"https://github.com/user-attachments/assets/32251094-0fc0-45d6-8626-aa2b01f108a7
+![Image](https://github.com/user-attachments/assets/1f0e81e5-4773-4960-92e5-91de6ac9d34c)
 
 - Step 17 :Creating the YOY Loan amount DAX Measure
-DAX Function:
+- 
+Following DAX expression was written:
 
         YTD Loan Amount = 
         CALCULATE(SUM('Loan_default'[LoanAmount]),DATESYTD('Loan_default'[Loan Date (DD/MM/YYYY)]),ALLEXCEPT('Loan_default','Loan_default'[Credit Score Bins],Loan_default[MaritalStatus]))
 
 A Line chart was used to represent YTD Loan Amount:
 
-https://github.com/user-attachments/assets/c0303563-fab2-42b0-a587-beb2015a15aa
+![Image](https://github.com/user-attachments/assets/f0481b69-8760-408e-80c2-d771bd23e180)
 
 - Step 18 : Creating YOY Default Loans change DAX Measure
 
-DAX Function: 
+Following DAX expression was written: 
 
         YOY Default Loan Change = 
         DIVIDE(
@@ -185,48 +183,36 @@ DAX Function:
 
 A Line chart was used to represent YOY Default Loan Change:
 
-https://github.com/user-attachments/assets/67015de0-5fab-4dec-8de9-e774f02235db
+![Image](https://github.com/user-attachments/assets/2f94402a-ebf6-4270-99eb-67654708137a)
 
 - Step 19 : Adding Ribbon Chart to show Loan Amount by Credit Score Bins and MaritalStatus
 
-https://github.com/user-attachments/assets/4dc894c1-eb1e-4e93-a924-5709e2f6fcbd
+![Image](https://github.com/user-attachments/assets/ec9ee99b-f8e0-439b-af3c-9f8975abe1c4)
 
 - Step 20 :Adding Decomposition Tree (DAX Used : SWITCH Function)
 
-"https://github.com/user-attachments/assets/aea5b492-63d7-4fed-81e3-fd2da2f8b5fd"
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Image](https://github.com/user-attachments/assets/434cc87b-eee4-4b6d-9970-f84c25351ebe)
 
 
 
 # Report Snapshot (Power BI DESKTOP)
-Loan Default & Overview
+- Loan Default & Overview
 
-https://github.com/user-attachments/assets/9e8473cc-5e1f-4584-8044-99940250db01
+![Image](https://github.com/user-attachments/assets/4dff7060-fee3-43a5-8e77-bb55a2faabb1)
 
-Applicant Demographics & Financial Profile
+
+
  # Report Snapshot (Power BI DESKTOP)
-
+- Applicant Demographics & Financial Profile
  
-"https://github.com/user-attachments/assets/772dcb7b-2b47-42fc-b251-282f73c7bac1"
+![Image](https://github.com/user-attachments/assets/59006a8a-22cd-452e-8da7-61ebb673e33e)
+
 
 # Report Snapshot (Power BI DESKTOP)
 
-Financial Risk Metrics
+- Financial Risk Metrics
 
-"https://github.com/user-attachments/assets/aa9e4eed-2f23-4e58-b15d-6ea57b02da13"
-
+![Image](https://github.com/user-attachments/assets/f6608c7a-7d20-472c-8d45-6955bcf40d2d)
 
 
 # Insights
