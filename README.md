@@ -1,28 +1,19 @@
 
-## Data Source:Dataflow
+## Business Intelligence & Sales Performance Dashboard
 
 
 
 ## Problem Statement
-Loan Default Dataset Description
+​Objective: Designed and developed an end-to-end Power BI solution to track and analyze key business metrics including Revenue, Profit Margins, and Sales Growth across multiple regions.
 
-The Loan Default Dataset contains information about borrowers who have applied for loans, along with details about their financial status, loan characteristics, and repayment behavior.  
+​Data Transformation: Utilized Power Query (M Language) to perform ETL operations, cleaning over 50,000+ rows of raw data and handling missing values and inconsistent formats.
 
-There is a lack of a centralized, interactive tool to monitor lending health and applicant risk. Specifically, the institution faces three core challenges:
-​Risk Identification: High default rates are observed in specific categories (e.g., Unemployed and Part-time workers), yet the correlation between these groups and their average income or loan purpose is not fully mapped.  
-​
-Demographic Shifts: Loan distribution is uneven across age groups (Adults vs. Seniors vs. Teens) and credit scores (Low to High). The institution cannot easily see how marital status or income brackets influence total loan volume and repayment capability.
-​Volatility in Performance: Historical data shows significant volatility in both YOY Loan Amount Change and Default Rates (notably peaks in 2015-2016). Without a visual breakdown, it is difficult to determine if these spikes are due to external economic factors or internal lending to specific risk bins.
-​Objective
-​The goal of this Power BI project is to develop a multi-dimensional dashboard that enables stakeholders to:
-​
-Analyze Default Patterns: Correlate employment types and education levels with default percentages.
-​Profile the Ideal Applicant: Identify which demographic "bins" (e.g., Middle-Aged Adults with High Credit) contribute most to the portfolio.
-​Forecast & Mitigate Risk: Use YOY trend analysis to identify periods of high default and adjust lending criteria for specific income brackets and employment types to ensure long-term portfolio stability.
-​Key Metrics Tracked
-​Performance: YOY Loan Amount Change, Average Income by Employment Type.
-​Risk: Default Rate (%) by Year/Employment, Loan Amount by Credit Score Bins.
-​Demographics: Median Loan Amount by Age Group, Marital Status, and Education Type.
+​Data Modeling: Established a Star Schema data model, creating efficient relationships between Fact and Dimension tables to optimize report performance.
+
+​Advanced Analytics: Developed complex DAX (Data Analysis Expressions) measures, including Time Intelligence (YoY, MoM growth), YTD calculations, and dynamic ranking to provide deep-drill insights.
+
+​Visualization: Created an interactive multi-page report with Slicers, Drill-throughs, and Tooltips, allowing stakeholders to identify a 15% revenue leakage in specific product categories.
+
 ### Steps followed 
 
 - Step 1 : Downloading, Installing & Configuring Standard Mode Gateway
